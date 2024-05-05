@@ -1,0 +1,186 @@
+<%@page pageEncoding="UTF-8"%>
+<div class="container-fluid position-relative bg-white d-flex p-0">
+
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <div class="sidebar pe-4 pb-3">
+        <nav class="navbar bg-light navbar-light">
+            <a href="index1.html" class="navbar-brand mx-4 mb-3">
+                <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>JoyfulResort</h3>
+            </a>
+            <div class="d-flex align-items-center ms-4 mb-4">
+                <div class="position-relative">
+                    <img class="rounded-circle" src="<c:url value='/backend/static/picture/user.jpg'></c:url>" alt="" style="width: 40px; height: 40px;">
+                    <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                </div>
+                <div class="ms-3">
+                    <h6 class="mb-0">員工姓名</h6>
+                    <span>員工職位</span>
+                </div>
+            </div>
+            <div class="navbar-nav w-100">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>員工管理</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="員工個人頁面.html" class="dropdown-item">個人資料管理</a>
+                        <a href="員工查詢頁面.html" class="dropdown-item">員工查詢</a>
+                        <a href="員工新增修改頁面.html" class="dropdown-item">人資專區</a>
+                        <a href="element.html" class="dropdown-item"></a>
+                    </div>
+                </div>
+                
+                <a href="會員頁面.jsp" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>會員管理</a>
+                
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>房間資料管理</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="房型新增修改頁面.html" class="dropdown-item">房型管理</a>
+                        <a href="房間新增修改頁面.html" class="dropdown-item">房間管理</a>
+                        <a href="element.html" class="dropdown-item"></a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>房務管理</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="checkin頁面.jsp" class="dropdown-item">check in</a>
+                        <a href="checkout頁面.jsp" class="dropdown-item">check out</a>
+                        <a href="住宿訂單管理頁面.jsp" class="dropdown-item">住宿訂單管理</a>
+                        <a href="element.html" class="dropdown-item"></a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-chart-bar me-2"></i>活動管理</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="活動新增修改頁面.html" class="dropdown-item">活動內容管理</a>
+                        <a href="活動訂單管理頁面.html" class="dropdown-item">活動訂單管理</a>
+                        <a href="element.html" class="dropdown-item"></a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-keyboard me-2"></i>會議廳管理</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="會議廳新增修改頁面.html" class="dropdown-item">會議廳內容管理</a>
+                        <a href="會議廳訂單管理頁面.html" class="dropdown-item">會議廳訂單管理</a>
+                        <a href="element.html" class="dropdown-item"></a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>餐廳管理</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="餐廳新增修改頁面.html" class="dropdown-item">餐廳內容管理</a>
+                        <a href="餐廳訂單管理頁面.html" class="dropdown-item">餐廳訂單管理</a>
+                        <a href="element.html" class="dropdown-item"></a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>圖文管理</a>
+                    <div class="dropdown-menu bg-transparent border-0">
+                        <a href="最新消息新增修改頁面.html" class="dropdown-item">最新消息管理</a>
+                        <a href="媒體報導管理頁面.html" class="dropdown-item">媒體報導管理</a>
+                        <a href="常見問題管理頁面.html" class="dropdown-item">常見問題管理</a>
+                        <a href="element.html" class="dropdown-item"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="content">
+
+        <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+            <a href="index1.html" class="navbar-brand d-flex d-lg-none me-4">
+                <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+            </a>
+            <a href="#" class="sidebar-toggler flex-shrink-0">
+                <i class="fa fa-bars"></i>
+            </a>
+            <form class="d-none d-md-flex ms-4">
+                <input class="form-control border-0" type="hidden" placeholder="Search">
+            </form>
+            <div class="navbar-nav align-items-center ms-auto">
+                <div style="visibility: hidden; opacity: 0;" class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa fa-envelope me-lg-2"></i>
+                        <span class="d-none d-lg-inline-flex">Message</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                        <a href="#" class="dropdown-item">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle"  src="<c:url value='/backend/static/picture/user.jpg'></c:url>" alt="" style="width: 40px; height: 40px;">
+                            <div class="ms-2">
+                                <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                <small>15 minutes ago</small>
+                            </div>
+                        </div>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle"  src="<c:url value='/backend/static/picture/user.jpg'></c:url>" alt="" style="width: 40px; height: 40px;">
+                                <div class="ms-2">
+                                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                    <small>15 minutes ago</small>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle"  src="<c:url value='/backend/static/picture/user.jpg'></c:url>" alt="" style="width: 40px; height: 40px;">
+                                <div class="ms-2">
+                                    <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                    <small>15 minutes ago</small>
+                                </div>
+                            </div>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item text-center">See all message</a>
+                    </div>
+                </div>
+                <div style="visibility: hidden; opacity: 0;" class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa fa-bell me-lg-2"></i>
+                        <span class="d-none d-lg-inline-flex">Notificatin</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                        <a href="#" class="dropdown-item">
+                            <h6 class="fw-normal mb-0">Profile updated</h6>
+                            <small>15 minutes ago</small>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item">
+                            <h6 class="fw-normal mb-0">New user added</h6>
+                            <small>15 minutes ago</small>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item">
+                            <h6 class="fw-normal mb-0">Password changed</h6>
+                            <small>15 minutes ago</small>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item text-center">See all notifications</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        <img class="rounded-circle me-lg-2" src="<c:url value='/backend/static/picture/user.jpg'></c:url>" alt="" style="width: 40px; height: 40px;">
+                        <span class="d-none d-lg-inline-flex">員工姓名</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                        <a href="員工資料頁.jsp" class="dropdown-item">基本資料</a>
+                        <a href="登出.jsp" class="dropdown-item">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
